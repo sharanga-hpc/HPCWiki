@@ -185,8 +185,9 @@ To delete a test batch of 10,000 files the RSync approach takes 0.136s of real t
 In comparison, `rm -rf` requires at least 0.140s of real time to delete the files, and it becomes considerably slower as the number of files increases.
 The benefit of using RSync over Perl despite it being slower is that RSync shows progress for the operation.
 
-#### Warning 
+:::warning 
 Please exercise caution while deleting files, as it might not be possible to restore them once deleted. Make sure that the files within the directory being deleted are definitely unnecessary.
+:::
 
 ### How do I selectively delete files?
 For selectively deleting files, the `find` command with the `-delete` flag is very helpful. 
@@ -200,5 +201,6 @@ Please note that this search is recursive, and files with this extension in subd
 `find` has a number of other ways to match files, including time of creation, regular expressions and permissions among other things.
 You can find out more about the parameters of `find` by running the command `man find`.
 
-#### Warning 
+:::warning 
 Please exercise caution while deleting files, as it might not be possible to restore them once deleted. Make sure that the files within the directory being deleted are definitely unnecessary.
+:::
